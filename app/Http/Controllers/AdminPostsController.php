@@ -34,7 +34,7 @@ class AdminPostsController extends Controller
         return view('admin.posts.edit', $data);
     }
 
-    public function update(PostRequest$request,$id)
+    public function update(PostRequest $request,$id)
     {
         $post = Post::find($id);
         $post->update($request->all());
